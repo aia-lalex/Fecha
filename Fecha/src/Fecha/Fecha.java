@@ -8,12 +8,12 @@
  * Versión 1.5 Refactorización para la cantidad de días del mes y si es bisiesto
  * FechaEclipse
  */
-package FechaEclipse;
+package Fecha;
 /**
  * @author Alejandro Hurtado Navarro
  *
  */
-public class FechaEclipse {
+public class Fecha {
 	public int dia;
 	public int mes;
 	public int año;
@@ -24,7 +24,7 @@ public class FechaEclipse {
  * @param mes introducir un mes válido
  * @param año introducir un año válido
  */
-	public FechaEclipse(int dia, int mes, int año) {
+	public Fecha(int dia, int mes, int año) {
 		this.dia = dia;
 		this.mes = mes;
 		this.año = año;
