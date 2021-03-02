@@ -49,10 +49,11 @@ public class Fecha {
 			return false;
 		if (mes < 1 || mes > 12)
 			return false;
-
-		// Determinamos la cantidad de días del mes:
+/**
+*		Determinamos la cantidad de días del mes:
+*/
 		int diasMes = 0;
-		switch (m) {
+		switch (mes) {
 		case 1:
 		case 3:
 		case 5:
@@ -69,20 +70,22 @@ public class Fecha {
 			diasMes = 30;
 			break;
 		case 2: // Verificamos si el año es bisiesto
-		if (bisiesto()) {
+		if (bisiesto() {
 			diasMes = 29;
 		} else {
 			diasMes = 28;
 		}
 		break;
 		}
-		if (d > diasMes) {
+		if (dia > diasMes) {
 			return false;
 		} else {
 			return true;
 		}
 	}
 	/**
-	 * 
-	 */public void bisiesto(){(a % 400 == 0) || ((a % 4 == 0) && (a % 100 != 0));}
+	 *  determina la cantidad de días del mes y si es bisiesto
+	 */
+	public void bisiesto(){(a % 400 == 0) || ((a % 4 == 0) && (a % 100 != 0));
+	}
 }
