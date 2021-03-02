@@ -17,13 +17,13 @@ public class Fecha {
 	public int dia;
 	public int mes;
 	public int año;
-	
-/**
- * 
- * @param dia introducir un día válido
- * @param mes introducir un mes válido
- * @param año introducir un año válido
- */
+
+	/**
+	 * 
+	 * @param dia introducir un día válido
+	 * @param mes introducir un mes válido
+	 * @param año introducir un año válido
+	 */
 	public Fecha(int dia, int mes, int año) {
 		this.dia = dia;
 		this.mes = mes;
@@ -49,17 +49,10 @@ public class Fecha {
 			return false;
 		if (mes < 1 || mes > 12)
 			return false;
-	
-		return bisiesto();
-	}
-	/**
-	 * @return determina la cantidad de días del mes y si es bisiesto
-	 */
-	public boolean bisiesto() {
-		// Determinamos la cantidad de días del mes
-		
+
+		// Determinamos la cantidad de días del mes:
 		int diasMes = 0;
-		switch (mes) {
+		switch (m) {
 		case 1:
 		case 3:
 		case 5:
@@ -75,18 +68,21 @@ public class Fecha {
 		case 11:
 			diasMes = 30;
 			break;
-	
 		case 2: // Verificamos si el año es bisiesto
-			if ((año % 400 == 0) || ((año % 4 == 0) && (año % 100 != 0)))
-				diasMes = 29;
-			else
-				diasMes = 28;
-			break;
+		if (bisiesto()) {
+			diasMes = 29;
+		} else {
+			diasMes = 28;
 		}
-		if (dia > diasMes)
+		break;
+		}
+		if (d > diasMes) {
 			return false;
-		else
+		} else {
 			return true;
-		
+		}
 	}
+	/**
+	 * 
+	 */public void bisiesto(){(a % 400 == 0) || ((a % 4 == 0) && (a % 100 != 0));}
 }
