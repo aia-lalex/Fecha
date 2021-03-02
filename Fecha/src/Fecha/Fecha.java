@@ -14,7 +14,7 @@ package Fecha;
  *
  */
 public class Fecha {
-	public int dia;
+	public int d;
 	public int mes;
 	public int año;
 	
