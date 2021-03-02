@@ -34,6 +34,14 @@ public class Fecha {
 	}
 	/**
 	 * @return Resultado de refactorizar el metodo valida fecha y mes
+	 * @deprecated Use {@link #validarFecha()} instead
+	 * 
+	 */
+	public boolean validar() {
+		return validarFecha();
+	}
+	/**
+	 * @return Resultado de refactorizar el metodo valida fecha y mes
 	 * 
 	 */
 	public boolean validarFecha() {
